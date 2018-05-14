@@ -67,3 +67,56 @@ header > p{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+.container > .mail > .pop-up{
+	visibility: hidden;
+	width: 600px;
+	height: 350px;
+	position: absolute;
+	background-color: #000;
+	opacity: 0.95;
+	left: 35%;
+	top: 20%;
+	text-align: center;
+}
+
+.container > .mail > .pop-up > .pop-up-header{
+	overflow: hidden;
+}
+
+.container > .mail > .pop-up > .pop-up-header > .close-pop-up{
+	float: right;
+	color: #fff;
+	background-color: #000;
+	margin: 5px;
+	border:none;
+}
+
+.container > .mail > .pop-up > .pop-up-header > .pop-up-title{
+	width: 90%;
+	float: left;
+	color: #fff;
+}
+
+.container > .mail > .pop-up > form > .form-control{
+	width: 95%;
+	border: 1px solid black;
+	padding: 5px;
+	margin-bottom: 30px;
+}
+
+.container > .mail > .show{
+	visibility: visible;
+}
+
+.container > .mail > .pop-up-bottun{
+	display: flex;
+	justify-content: center;
+}
+
+.container > .mail > .popup-button{
+	margin-left: 42%;
+	margin-right: 45%;
+	margin-top: 50px;
+	width: 200px;
+}
