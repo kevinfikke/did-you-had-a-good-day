@@ -26,35 +26,4 @@ header > p{
 	background-color: white;
 	border: none;
 }
-
-footer > .pop-up{
-	visibility: hidden;
-	width: 500px;
-	height: 300px;
-	position: absolute;
-	background-color: blue;
-	left: 35%;
-	top: 20%;
-	text-align: center;
-}
-
-footer > .pop-up > form > .input-email{
-	width: 90%;
-	border: 1px solid black;
-	padding: 5px;
-	margin-bottom: 30px;
-}
-
-footer > .show{
-	visibility: visible;
-}
-
-footer > .pop-up-bottun{
-	display: flex;
-	justify-content: center;
-}
-
-footer > .popup-button{
-	margin-left: 46%;
-	margin-right: 45%;
-}
+    
