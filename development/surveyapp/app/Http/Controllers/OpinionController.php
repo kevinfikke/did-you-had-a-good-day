@@ -13,7 +13,12 @@ class OpinionController extends Controller
      */
     public function index()
     {
-        //
+        
+        $entries = \App\Opinion::where('created_at', '=', Carbon::today()->toDateString());
+
+        $entry = \App\Opinion::all();
+        
+        dd($entry);
     }
 
     /**

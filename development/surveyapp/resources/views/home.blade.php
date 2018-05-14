@@ -14,10 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! Welcome to the dashboard.
                 </div>
             </div>
         </div>
     </div>
+
+    @include('layouts.sidebar')
 </div>
 @endsection
