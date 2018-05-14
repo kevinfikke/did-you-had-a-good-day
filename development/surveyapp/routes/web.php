@@ -19,7 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//Opinions
+
+Route::get('/opinions', 'OpinionController@index')->name('opinions');
+
 Route::post('/', 'OpinionController@store')->name('vote'); //goes to the store function of opinioncontroller
+
+//Mails
 
 Route::post('/beoordelen', 'MailController@store')->name('mail');
 
