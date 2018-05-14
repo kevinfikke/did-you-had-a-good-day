@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OpinionController extends Controller
+class MailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,14 +34,13 @@ class OpinionController extends Controller
      */
     public function store(Request $request)
     {
+        $mailer = $request->get('mail');
 
-        $option = $request->get('option'); //gets the chosen option from users
+        $mail = new \App\Mail();
 
-        $opinion = new \App\Opinion();
-
-        $opinion->option = $option; //specifies the option column to be the option a user selected
+        $mail->mail = $mailer;
         
-        $opinion->save(); //saves data to database
+        $mail->save(); //saves data to database
 
         return redirect('/'); //redirects to homepage
     }

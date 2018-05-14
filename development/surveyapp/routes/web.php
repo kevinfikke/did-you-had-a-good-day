@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('OpinionController@store')->name('vote');  
+Route::post('/', 'OpinionController@store')->name('vote'); //goes to the store function of opinioncontroller
+
+Route::post('/beoordelen', 'MailController@store')->name('mail');
+
+

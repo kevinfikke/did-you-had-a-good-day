@@ -12,7 +12,7 @@ header > p{
 	text-align: center;
 }
 
-.content{
+.opinionForm{
 	display: flex;
 }
 
@@ -26,4 +26,7 @@ header > p{
 	background-color: white;
 	border: none;
 }
-    
+
+.mail input {
+	margin: 8px;
+}

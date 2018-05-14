@@ -3,35 +3,34 @@
 @section('content')
 <div class="container">
     <div class="content">
-	<form method="post" action="{{ route('vote') }}">
-		<input type="hidden" value="{{csrf_token()}}" name="_token"/>
-			<button>
+
+		<form class="opinionForm" method="post" action="{{ route('vote') }}">	
+    {{csrf_field()}}
+			<button name="option" value="1">
+				<div class="img">
+					<img src="img/happy.png">
+				</div>
+			</button>
+			<button name="option" value="2">
+				<div class="img">
+					<img src="img/neutral.png">
+				</div>
+			</button>
+			<button name="option" value="3">
 				<div class="img">
 					<img src="img/sad.png">
 				</div>
             </button>
-            <input type="submit" class="form-control" name="1">
 		</form>
+	</div>
 
-		<form method="post" action="{{route('vote') }}">
-			<input type="hidden" value="{{csrf_token()}}" name="_token">
-			<button>
-				<div class="img">
-					<img src="img/neutral.png">
-				</div>
-            </button>
-            <input type="submit" class="form-control" name="2">
+	<div class="mail">
+		<h2>Meer te vragen? Laat je mail achter</h2>
+		<form method="post" action="{{ route('mail') }}">
+		{{csrf_field()}}
+			<input type="email" name="mail" class="form-control">
+			<input type="submit" class="btn btn-primary">
 		</form>
-			
-		<form method="post" action="{{ route('vote') }}">	
-			<input type="hidden" value="{{csrf_token()}}" name="_token"/>
-			<button>
-				<div class="img">
-					<img src="img/happy.png">
-				</div>
-            </button>
-            <input type="submit" class="form-control" name="3">
-        </form>
 	</div>
 </div>
 @endsection
