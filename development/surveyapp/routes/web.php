@@ -26,6 +26,10 @@ Route::get('/opinions', 'OpinionController@index')->name('opinions');
 
 Route::post('/', 'OpinionController@store')->name('vote'); //goes to the store function of opinioncontroller
 
+//Charts
+
+Route::get('/charts', 'ChartController@getPie')->name('chart');
+
 //Mails
 
 Route::post('/beoordelen', 'MailController@store')->name('mail');
