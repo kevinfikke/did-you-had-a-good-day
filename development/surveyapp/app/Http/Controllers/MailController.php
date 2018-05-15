@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\support\facades\DB;
 
 class MailController extends Controller
 {
@@ -13,7 +14,12 @@ class MailController extends Controller
      */
     public function index()
     {
-        //
+        $notDoneMails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 0"));
+        $sendMails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 1"));
+        
+        $mails = [$notDoneMails, $sendMails]; 
+
+        return view("mails")->with(array('returnMails' => $mails));
     }
 
     /**
@@ -74,9 +80,9 @@ class MailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

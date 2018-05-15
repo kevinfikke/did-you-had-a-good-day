@@ -27,6 +27,9 @@ Route::get('/opinions', 'OpinionController@index')->name('opinions');
 Route::post('/', 'OpinionController@store')->name('vote'); //goes to the store function of opinioncontroller
 
 //Mails
+Route::get('/mails', 'MailController@index')->name('mails');
+
+route::put('/mails', 'MailController@update')->name('mails');
 
 Route::post('/beoordelen', 'MailController@store')->name('mail');
 
