@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class OpinionController extends Controller
 {
@@ -13,12 +15,12 @@ class OpinionController extends Controller
      */
     public function index()
     {
+        $now = Carbon::today();
+        $today = $now->toDateString();
         
-        $entries = \App\Opinion::where('created_at', '=', Carbon::today()->toDateString());
+        $results = DB::select( DB::raw("SELECT `option` FROM tbl_opinions WHERE created_at LIKE '$today%'"));
 
-        $entry = \App\Opinion::all();
-        
-        dd($entry);
+        return \View::make("opinions.index")->with(array('opinionResults'=>$results));
     }
 
     /**

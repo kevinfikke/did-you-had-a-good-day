@@ -24,7 +24,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/opinions', 'OpinionController@index')->name('opinions');
 
-Route::post('/', 'OpinionController@store')->name('vote'); //goes to the store function of opinioncontroller
+Route::post('/', 'OpinionController@store')->name('vote');
+
+//Charts
+
+Route::get('/totalchart', 'ChartController@getTotal')->name('totalchart');
+Route::get('/dailychart', 'ChartController@getDaily')->name('dailychart');
+Route::get('/weeklychart', 'ChartController@getWeekly')->name('weeklychart');
+Route::get('/monthlychart', 'ChartController@getMonthly')->name('monthlychart');
 
 //Mails
 Route::get('/mails', 'MailController@index')->name('mails');

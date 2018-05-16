@@ -8,7 +8,7 @@
     {{csrf_field()}}
 			<button name="option" value="1">
 				<div class="img">
-					<img src="img/happy.png">
+					<img src="img/sad.png">
 				</div>
 			</button>
 			<button name="option" value="2">
@@ -18,7 +18,7 @@
 			</button>
 			<button name="option" value="3">
 				<div class="img">
-					<img src="img/sad.png">
+					<img src="img/happy.png">
 				</div>
             </button>
 		</form>

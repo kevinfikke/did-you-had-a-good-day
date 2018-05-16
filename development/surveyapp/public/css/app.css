@@ -53,6 +53,10 @@ header > p{
     display: block;
 }
 
+#app > div.sidenav > li {
+	list-style: none;
+}
+
 .sidenav a:hover {
     color: #f1f1f1;
 }
