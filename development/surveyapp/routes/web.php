@@ -33,11 +33,16 @@ Route::get('/dailychart', 'ChartController@getDaily')->name('dailychart');
 Route::get('/weeklychart', 'ChartController@getWeekly')->name('weeklychart');
 Route::get('/monthlychart', 'ChartController@getMonthly')->name('monthlychart');
 
+
 //Mails
 Route::get('/mails', 'MailController@index')->name('mails');
 
 route::put('/mails', 'MailController@update')->name('mails');
 
 Route::post('/beoordelen', 'MailController@store')->name('mail');
+
+//excel
+
+Route::get('/export', 'ExcelController@export')->name('excel');
 
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Khill\Lavacharts\Lavacharts;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ChartController extends Controller
 {
@@ -154,5 +155,13 @@ class ChartController extends Controller
             'totalHappyMonthly'      => $totalHappyMonthly
         ]);
 
+    }
+
+    public function convortDataToExcelAll(){
+        $test = DB::select( DB::raw("SELECT `option` FROM tbl_opinions WHERE `option` = 1"));
+
+            $excel->sheet('sheet1', function ($sheet) use ($test) {
+                $sheet->fromArray($test);
+            })->download('xlxs');
     }
 }

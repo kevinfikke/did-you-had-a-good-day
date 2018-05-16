@@ -19,6 +19,7 @@
                 <div id="barchart-div"></div>
                 {!! $lavaBar->render('BarChart', 'barVotes', 'barchart-div') !!}  
             </div>
+            <a href="{{route('excel')}}">convort to excel</a>
         </div>    
     </div>    
 

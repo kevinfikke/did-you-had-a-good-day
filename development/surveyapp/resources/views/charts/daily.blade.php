@@ -19,6 +19,7 @@
                 <div id="barchart-div"></div>
                 {!! $lavaDaily->render('BarChart', 'votesToday', 'barchart-div') !!}  
             </div>
+            
         </div>    
     </div>    
 
