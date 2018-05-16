@@ -19,10 +19,10 @@
                   			<tr>
 							    <th class="mail">{{$returnmail->mail}}</th>
 							    <th class="send-mail-button">
-							    	<form method="post" action="{{ route('mails')}}">
+							    	<form method="post" action="{{ route('mails') , $returnmail->id}}">
 							    		<input type="hidden" name="_method" value="PUT">
 							    		{{csrf_field()}}
-							    		<input type="submit" name="test" value="verzenden">
+							    		<input class="btn btn-primary" type="submit" name="test" value="verzenden">
 							    		<input type="hidden" name="id" value="{{$returnmail->id}}">
 							    	</form>
 							    </th>

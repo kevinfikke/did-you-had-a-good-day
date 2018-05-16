@@ -82,7 +82,17 @@ class MailController extends Controller
      */
     public function update(Request $request)
     {
-        dd($request);
+        $getPostData = $request->all();
+
+        $id = $getPostData['id'];
+        
+
+        DB::table('tbl_mails')
+            ->where('id', $id)
+            ->update(['done' => 1]);
+
+          return redirect('mails');
+        
     }
 
     /**
