@@ -41,3 +41,6 @@ route::put('/mails', 'MailController@update')->name('mails');
 Route::post('/beoordelen', 'MailController@store')->name('mail');
 
 
+// excel export
+
+Route::get('/excel', 'ExcelExport@export');

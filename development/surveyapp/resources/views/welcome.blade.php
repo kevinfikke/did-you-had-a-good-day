@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container app">
     <div class="content">
-
+		<div class="logo">
+			<img class="logo-img" src="img/logo.png" alt="">
+		</div>
 		<form class="opinionForm" method="post" action="{{ route('vote') }}">	
     {{csrf_field()}}
 			<button name="option" value="1">
