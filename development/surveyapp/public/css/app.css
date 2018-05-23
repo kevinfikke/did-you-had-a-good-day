@@ -16,6 +16,15 @@ header > p{
 	display: flex;
 }
 
+body{
+	background-color: #20358c;
+}
+
+.app > .content > .logo > .logo-img{
+	width: 25%;
+	margin-bottom: 20px;
+}
+
 .content img{
 	width: 83%;
 
@@ -79,7 +88,7 @@ header > p{
 	position: absolute;
 	background-color: #000;
 	opacity: 0.95;
-	left: 35%;
+	left: 30%;
 	top: 20%;
 	text-align: center;
 }
@@ -127,4 +136,33 @@ header > p{
 
 .container > .row > .col-md-8 > .panel > .panel-body > table{
 	width: 100%;
+}
+
+
+@media only screen and (max-width: 1025px){
+	.container > .mail > .pop-up{
+		left:20% ;
+	}
+	.container > .mail > .popup-button{
+		margin-left: 40%;
+	}
+}
+
+@media only screen and (max-width: 801px){
+	.container > .mail > .pop-up{
+		left:13%;
+	}
+	.container > .mail > .popup-button{
+		margin-left: 38%;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.container > .mail > .pop-up{
+		left:8%;
+		width: 500px;
+	}
+	.container > .mail > .popup-button{
+		margin-left: 34%;
+	}
 }

@@ -105,4 +105,19 @@ class MailController extends Controller
     {
         //
     }
+
+    public function collection()
+    {
+        $test = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 1"));
+        //  $mails = array();
+        // foreach($test as $mail){
+        //     // var_dump($mail);
+        //     $mails['mail'] = $mail->mail; 
+        //     // var_dump($mails);
+        // }
+        // // var_dump($mails);
+        
+        
+        return \Excel::download($test, 'test.xlsx');
+    }
 }
