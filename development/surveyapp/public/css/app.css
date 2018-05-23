@@ -16,9 +16,6 @@ header > p{
 	display: flex;
 }
 
-body{
-	background-color: #20358c;
-}
 
 .app > .content > .logo > .logo-img{
 	width: 25%;
@@ -137,6 +134,16 @@ body{
 
 .container > .row > .col-md-8 > .panel > .panel-body > table{
 	width: 100%;
+}
+
+/* header */
+
+#app > nav {
+	background-color: #20358C;
+}
+
+#app > nav > div > div.navbar-header > a > img {
+	width: 36%;
 }
 
 
