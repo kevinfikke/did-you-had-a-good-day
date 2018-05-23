@@ -21,7 +21,7 @@ class automail extends Mailable
 
     public function __construct($mailaddress)
     {
-        $this->$mailaddress = $mail;
+        // $this->$mailaddress = $mail;
     }
 
     /**
@@ -32,11 +32,10 @@ class automail extends Mailable
     public function build()
     {
 
-        $address = 'example@mailtrap.io';
-        $name = 'Test';
+        // $address = 'example@mailtrap.io';
+        // $name = 'Test';
 
-        return $this->view('emails.send')
-        ->from($address, $name)
-        ->with($mail);
+        return $this->view('emails.send');
+    //     ->from($address, $name); 
     }
 }

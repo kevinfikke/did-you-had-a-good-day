@@ -249,7 +249,8 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 			<table>
 				<tr>
 					<td>
-						<h3>{{$mail}} wilt contact opnemen</h3>
+							{{-- {{$mail}} wilt contact opnemen --}}
+						<h3> wilt contact opnemen</h3>
 						<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt excepturi libero iste.
                              Laboriosam quis quos, fugit a, architecto magnam assumenda voluptatum nostrum sunt ex voluptatibus autem vel dicta fuga?</p>
 						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus.
