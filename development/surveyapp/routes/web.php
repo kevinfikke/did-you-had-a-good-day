@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -39,5 +38,12 @@ Route::get('/mails', 'MailController@index')->name('mails');
 route::put('/mails', 'MailController@update')->name('mails');
 
 Route::post('/beoordelen', 'MailController@store')->name('mail');
+
+// Route::get('/send', function () {
+
+//     Mail::to('example@mailtrap.io')->send(new Automail);
+
+//     return view('welcome');
+// });
 
 

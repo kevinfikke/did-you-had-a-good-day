@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\support\facades\DB;
+use \App\Mail\Automail;
+use Mail;
+
 
 class MailController extends Controller
 {
@@ -47,6 +50,8 @@ class MailController extends Controller
         $mail->mail = $mailer;
         
         $mail->save(); //saves data to database
+
+        Mail::to('example@mailtrap.io')->send(new Automail($mailer)); //Send reminder when new person wants to make contact
 
         return redirect('/'); //redirects to homepage
     }
