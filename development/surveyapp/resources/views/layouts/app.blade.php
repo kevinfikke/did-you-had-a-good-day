@@ -29,7 +29,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{-- {{ config('app.name', 'Laravel') }} --}}
+                        <img src="img/florijn-college-logo.png">
                     </a>
                 </div>
 

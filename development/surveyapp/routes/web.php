@@ -18,6 +18,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => 'auth'], function () {
+    $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    $this->post('register', 'Auth\RegisterController@register');
+});
+
 
 //Opinions
 
