@@ -3,7 +3,7 @@
 @section('content')
 <div class="container app">
     <div class="content">
-		<h1 class="head-title">Hoe was je dag?</h1>
+		<h1 class="head-title">Heb je een leuke dag gehad?</h1>
 		<form class="opinionForm" method="post" action="{{ route('vote') }}">	
     {{csrf_field()}}
 			<button name="option" value="1">
