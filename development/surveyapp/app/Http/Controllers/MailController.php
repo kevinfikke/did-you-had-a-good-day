@@ -17,10 +17,9 @@ class MailController extends Controller
      */
     public function index()
     {
-        $notDoneMails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 0"));
-        $sendMails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 1"));
+        $Mails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 0"));
         
-        $mails = [$notDoneMails, $sendMails]; 
+        $mails = [$Mails]; 
 
         return view("mails")->with(array('returnMails' => $mails));
     }
@@ -44,16 +43,42 @@ class MailController extends Controller
     public function store(Request $request)
     {
         $mailer = $request->get('mail');
+        $phone = $request->get('phone');
 
-        $mail = new \App\Mail();
+        if (isset($mailer) && isset($phone)) {
+            $mail = new \App\Mail();
 
-        $mail->mail = $mailer;
+            $mail->mail = $mailer;
+            $mail->phone = $phone;
         
-        $mail->save(); //saves data to database
+            $mail->save(); //saves data to database
 
+            return redirect('/'); //redirects to homepage
+        }elseif (isset($mailer)) {
+            $mail = new \App\Mail();
+
+            $mail->mail = $mailer;
+        
+            $mail->save(); //saves data to database
+
+            return redirect('/'); //redirects to homepage
+        }elseif (isset($phone)) {
+            $mail = new \App\Mail();
+
+            $mail->phone = $phone;
+        
+            $mail->save(); //saves data to database
+
+            return redirect('/'); //redirects to homepage
+        }else{
+             return redirect('/'); //redirects to homepage
+        }
+
+        
+       
         // Mail::to('example@mailtrap.io')->send(new Automail($mailer)); //Send reminder when new person wants to make contact
 
-        return redirect('/'); //redirects to homepage
+        
     }
 
     /**
