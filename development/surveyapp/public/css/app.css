@@ -187,3 +187,9 @@ header > p{
 		margin-left: 34%;
 	}
 }
+
+/* Helper classes */
+
+.center {
+	text-align: center;
+}
