@@ -71,7 +71,7 @@ class MailController extends Controller
 
             return redirect('/'); //redirects to homepage
         }else{
-             return redirect('/'); //redirects to homepage
+            return redirect('/'); //redirects to homepage
         }
 
         

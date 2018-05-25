@@ -13,7 +13,7 @@
                     	<tr>
                     		<th>mail</th>
                             <th>telefoon nummer</th>
-                    		<th>done</th>
+                    		<th>afgerond</th>
                     	</tr>
 						
                   		@foreach ($returnMails[0] as $returnmail)
