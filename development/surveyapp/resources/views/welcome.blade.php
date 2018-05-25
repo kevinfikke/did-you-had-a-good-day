@@ -6,6 +6,9 @@
 		<div class="logo">
 			<img class="logo-img" src="img/logo.png" alt="">
 		</div>
+		<div class="slogan">
+			<h1>Heb je een leuke dag gehad?</h1>
+		</div>
 		<form class="opinionForm" method="post" action="{{ route('vote') }}">	
     {{csrf_field()}}
 			<button name="option" value="1">
