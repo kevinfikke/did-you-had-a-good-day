@@ -51,7 +51,7 @@ class MailController extends Controller
         
         $mail->save(); //saves data to database
 
-        Mail::to('example@mailtrap.io')->send(new Automail($mailer)); //Send reminder when new person wants to make contact
+        // Mail::to('example@mailtrap.io')->send(new Automail($mailer)); //Send reminder when new person wants to make contact
 
         return redirect('/'); //redirects to homepage
     }
