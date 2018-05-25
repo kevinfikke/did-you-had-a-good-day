@@ -18,10 +18,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => 'auth'], function () { //Makes it so nobody can go to the register form temporarily
+// Route::group(['middleware' => 'auth'], function () { //Makes it so nobody can go to the register form temporarily
     $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     $this->post('register', 'Auth\RegisterController@register');
-});
+// });
 
 
 //Opinions
