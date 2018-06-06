@@ -7,6 +7,9 @@
 
                 <ul class="dropdown-menu">
                     <li>
+                        <a href="{{route('ownchart')}}">Choose</a>
+                    </li>
+                    <li>
                         <a href="{{route('totalchart')}}">Total</a>
                     </li>
                     <li>

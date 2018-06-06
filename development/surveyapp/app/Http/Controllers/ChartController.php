@@ -155,4 +155,44 @@ class ChartController extends Controller
         ]);
 
     }
+
+    public function owndate(Request $request) 
+    {
+
+        $lavaOwn = new Lavacharts;
+
+        $votesOwn  = $lavaOwn->DataTable();
+
+        $firstdate = $request->date1;
+        $seconddate = $request->date2;
+
+        $sadOwn = DB::select( DB::raw("SELECT `option` FROM tbl_opinions WHERE `created_at` BETWEEN '$firstdate' AND '$seconddate' && `option` = 1"));
+        $totalSadOwn = count($sadOwn);
+
+        $neutralOwn = DB::select( DB::raw("SELECT `option` FROM tbl_opinions WHERE `created_at` BETWEEN '$firstdate' AND '$seconddate' && `option` = 2"));
+        $totalNeutralOwn = count($neutralOwn);
+
+        $happyOwn = DB::select( DB::raw("SELECT `option` FROM tbl_opinions WHERE `created_at` BETWEEN '$firstdate' AND '$seconddate' && `option` = 3"));
+        $totalHappyOwn = count($happyOwn);
+
+        $votesOwn->addStringColumn('votesOwn')
+        ->addNumberColumn('Votes')
+        ->addRow(['Sad', $totalSadOwn])
+        ->addRow(['Neutral', $totalNeutralOwn])
+        ->addRow(['Happy', $totalHappyOwn]);
+
+        $barChartOwn = $lavaOwn->BarChart('votesOwn', $votesOwn, [
+            'title' => 'votes'
+        ]);
+
+        return view('charts.datechart', [
+            'lavaOwn'            => $lavaOwn,
+            'totalSadOwn'        => $totalSadOwn,
+            'totalNeutralOwn'    => $totalNeutralOwn,
+            'totalHappyOwn'      => $totalHappyOwn,
+            'firstdate'          => $firstdate,
+            'seconddate'         => $seconddate
+        ]);
+
+    }
 }
