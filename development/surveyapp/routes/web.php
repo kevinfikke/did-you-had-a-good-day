@@ -36,6 +36,11 @@ Route::get('/totalchart', 'ChartController@getTotal')->name('totalchart');
 Route::get('/dailychart', 'ChartController@getDaily')->name('dailychart');
 Route::get('/weeklychart', 'ChartController@getWeekly')->name('weeklychart');
 Route::get('/monthlychart', 'ChartController@getMonthly')->name('monthlychart');
+Route::get('/datechart', 'ChartController@owndate')->name('datechart');
+
+Route::get('/ownchart', function () {
+    return view('charts/owndate');
+})->name('ownchart');
 
 //Mails
 Route::get('/mails', 'MailController@index')->name('mails');
