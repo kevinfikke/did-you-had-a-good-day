@@ -4,6 +4,8 @@
 
     <div class="container">
         <div class="content">
+
+            <h1>Give votes between:</h1>
             
             <div class="dates">
             <form action="{{ route('datechart') }}">

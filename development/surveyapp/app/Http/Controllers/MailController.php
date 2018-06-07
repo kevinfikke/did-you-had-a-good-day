@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use \App\Mail\Automail;
 use Mail;
 

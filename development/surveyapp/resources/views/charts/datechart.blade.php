@@ -7,6 +7,14 @@
 
                 <h1>Votes between {{$firstdate}} and {{$seconddate}}</h1>
 
+                <div class="totalnumbers">
+                        <div class="monthlyVoteCount">
+                            <h3>Didn't have a good day :{{ $totalSadOwn }}</h3>
+                            <h3>Had a neutral day :{{ $totalNeutralOwn }}</h3>
+                            <h3>Had a good day :{{ $totalHappyOwn }}</h3>
+                        </div>
+                </div>
+
                  <div class="barChart">
                 <div id="barchart-div"></div>
                 {!! $lavaOwn->render('BarChart', 'votesOwn', 'barchart-div') !!}
