@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\facades\DB;
 use \App\Mail\Automail;
 use Mail;
 
@@ -18,7 +18,7 @@ class MailController extends Controller
     public function index()
     {
         $Mails = DB::select( DB::raw(" SELECT * FROM tbl_mails WHERE done = 0"));
-        
+                 DB::select( DB::raw(
         $mails = [$Mails]; 
 
         return view("mails")->with(array('returnMails' => $mails));
